@@ -1,6 +1,6 @@
 'use strict';
 
-
+console.log("script loaded")
 
 /**
  * navbar toggle
@@ -10,6 +10,7 @@ const header = document.querySelector("[data-header]");
 const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
 
 navToggleBtn.addEventListener("click", function () {
+  console.log("working")
   header.classList.toggle("nav-active");
   this.classList.toggle("active");
 });
@@ -26,19 +27,6 @@ for (let i = 0; i < navbarLinks.length; i++) {
     navToggleBtn.classList.toggle("active");
   });
 }
-
-const linkContainer = document.getElementById('protofilo');
-
-// Create a new anchor element
-const link = document.createElement('a');
-
-// Set the link's properties
-link.href = 'https://protoflio.com'; // Set the URL
-link.textContent = 'protoflio'; // Set the link text
-link.className = 'link'; // Add a class for styling
-
-// Append the link to the container
-linkContainer.appendChild(link);
 
 
 
@@ -57,5 +45,3 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
-
-
